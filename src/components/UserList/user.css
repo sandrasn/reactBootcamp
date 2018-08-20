@@ -1,0 +1,14 @@
+.user-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  float: left;
+  margin-top: 10px;
+}
+
+.username {
+  float: right;
+  padding-top: 16px;
+  padding-left: 7px;
+  padding-bottom: 7px;
+}

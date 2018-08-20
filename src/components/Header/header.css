@@ -1,0 +1,41 @@
+/*.nav-bar {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}*/
+
+.insta_logo {
+  margin-top: 10px;
+  float: left;
+  width: 60px;
+  height: 60px;
+  display: block;
+}
+
+.create_btn {
+  margin-top: 10px;
+  float: right;
+  width: 90px;
+  height: 30px;
+  display: block;
+  margin-left: 10px;
+  background: white;
+  color: black;
+  font-family: "Times New Roman";
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+.log_btn {
+  margin-top: 10px;
+  float: right;
+  width: 90px;
+  height: 30px;
+  display: block;
+  background: blue;
+  color: white;
+  font-family: "Times New Roman";
+  font-weight: bold;
+  border-radius: 10px;
+}
