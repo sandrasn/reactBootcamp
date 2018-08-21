@@ -1,0 +1,12 @@
+.show {
+  display: block;
+  background: rgba(0, 0, 0, 0.5);
+}
+.input-img {
+  margin-bottom: 5px;
+}
+.img-prev {
+  padding-top: 5px;
+  max-width: 100%; /*only this value is in %, other in pixels */
+  max-height: 150px;
+}

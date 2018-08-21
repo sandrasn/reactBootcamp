@@ -1,14 +1,10 @@
-import React, { Component } from "react";
+import React from "react";
 
-class UserCard extends Component {
-  render() {
-    return (
-      <div class="user">
-        <img className="user-img" src={this.props.image} />
-        <p className="username"> {this.props.username}</p>
-      </div>
-    );
-  }
-}
+const UserCard = ({ image, username }) => (
+  <div className="user">
+    <img className="user-img" src={image} />
+    <p className="username"> {username}</p>
+  </div>
+);
 
 export default UserCard;
