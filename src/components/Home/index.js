@@ -9,9 +9,22 @@ import LightBox from "../LightBox";
 import "./home.css";
 
 class Home extends Component {
-  state = {
-    isModalOpen: false
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      isModalOpen: false
+    };
+    props.validateToken();
+  }
+
+  componentDidUpdate() {
+    //This function wont allow to see page without loggin in.
+    const { loginReducer } = this.props;
+    if (!loginReducer.isLogged) {
+      this.props.history.push("/login");
+    }
+  }
+
   handleOpenModal = () => {
     this.setState({ isModalOpen: true });
   };

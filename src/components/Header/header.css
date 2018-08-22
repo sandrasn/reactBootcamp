@@ -5,12 +5,11 @@
   width: 100%;
 }*/
 
-.insta_logo {
+.fa-camera-retro {
   margin-top: 10px;
   float: left;
   width: 90px;
   height: 55px;
-  display: block;
 }
 
 .create_btn {
@@ -33,8 +32,8 @@
   width: 90px;
   height: 30px;
   display: block;
-  background: blue;
-  color: white;
+  background: rgba(246, 193, 142, 0.9);
+  color: black;
   font-family: "Times New Roman";
   font-weight: bold;
   border-radius: 10px;

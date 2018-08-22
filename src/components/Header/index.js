@@ -8,7 +8,9 @@ class Header extends Component {
   render() {
     return (
       <div className="col-sm-12 nav-bar">
-        <img className="insta_logo" src={logo} />
+        <div className="icon">
+          <i className="fas fa-camera-retro fa-2x" />
+        </div>
         <button className="create_btn">Log Out</button>
         <button className="log_btn" onClick={this.props.handleOpenModal}>
           New post
