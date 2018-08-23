@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`testing PostCard renders a snapshot 1`] = `
+<div
+  className="card"
+>
+  <img
+    className="card-img-top"
+  />
+  <h5
+    className="card-title"
+  >
+     
+  </h5>
+  <p
+    className="post-text"
+  >
+     
+  </p>
+</div>
+`;

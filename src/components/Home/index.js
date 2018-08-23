@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Posts from "../Posts";
+import Posts from "../../containers/Posts";
 import UserList from "../UserList";
 import Header from "../Header";
-import PostModal from "../PostModal";
+import PostModal from "../../containers/PostModal";
 import LightBox from "../LightBox";
 import "./home.css";
 

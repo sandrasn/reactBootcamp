@@ -13,3 +13,8 @@ export const LOGIN_ERROR = "LOGIN_ERROR";
 
 export const REGISTER_SUCCES = "REGISTER_SUCCES";
 export const REGISTER_ERROR = "REGISTER_ERROR";
+
+export const SUBMIT_SUCCESS = "REGISTER_SUCCESS";
+export const SUBMIT_ERROR = "REGISTER_ERROR";
+
+export const LOAD_POSTS = "LOAD_POSTS ";

@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing UserCard renders a snapshot 1`] = `
+<div
+  className="user"
+>
+  <img
+    className="user-img"
+  />
+  <p
+    className="username"
+  >
+     
+  </p>
+</div>
+`;

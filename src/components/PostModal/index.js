@@ -3,17 +3,40 @@ import "./index.css";
 
 class PostModal extends Component {
   state = {
-    imageUrl: null
+    imageUrl: null,
+    formData: null,
+    caption: ""
   };
 
   handleAddImg = event => {
     const file = event.target.files[0]; // built in JS function plus only one file acception
     const fileReader = new FileReader();
+    const formData = new FormData();
+
+    formData.append("media", file);
+
     fileReader.onloadend = () => {
-      this.setState({ imageUrl: fileReader.result });
+      this.setState({ formData, imageUrl: fileReader.result });
     };
     fileReader.readAsDataURL(file);
   };
+
+  //send image to server database
+  handleSubmit = e => {
+    e.preventDefault();
+    const { formData, caption } = this.state;
+    this.props.submitPost(formData, caption).then(() => {
+      this.props.getPosts();
+    });
+  };
+
+  componentDidUpdate() {
+    if (this.props.postsReducer.isSubmitted) {
+      this.props.handleCloseModal();
+    }
+  }
+
+  onChange = e => this.setState({ caption: e.target.value });
 
   render() {
     const { imageUrl } = this.state;
@@ -29,7 +52,11 @@ class PostModal extends Component {
             <form>
               <div className="mb-3">
                 <label> Caption: </label>
-                <input className="form-control" type="text " />
+                <input
+                  className="form-control"
+                  type="text"
+                  onChange={this.onChange}
+                />
               </div>
 
               <input
@@ -50,7 +77,11 @@ class PostModal extends Component {
             >
               Close
             </button>
-            <button type="button" className="btn btn-primary">
+            <button
+              type="button"
+              className="btn btn-primary"
+              onClick={this.handleSubmit}
+            >
               Save changes
             </button>
           </div>

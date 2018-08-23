@@ -1,46 +1,21 @@
 import React, { Component } from "react";
 import PostCard from "../PostCard";
-import placeholder from "../../media/image-placeholder.svg";
+//import placeholder from "../../media/image-placeholder.svg";
 
 class Posts extends Component {
+  componentDidMount() {
+    this.props.getPosts();
+  }
   render() {
+    if (!this.props.postsReducer || !this.props.postsReducer.list) {
+      return null;
+    }
     return (
       <div className="mx-auto">
-        <PostCard
-          text="some text 0 "
-          title="Some title 0"
-          placeholder={placeholder}
-        />
-        <PostCard
-          text="some text 1 "
-          title="Some title 1"
-          placeholder={placeholder}
-        />
-        <PostCard
-          text="some text 1 "
-          title="Some title 1"
-          placeholder={placeholder}
-        />
-        <PostCard
-          text="some text 1 "
-          title="Some title 1"
-          placeholder={placeholder}
-        />
-        <PostCard
-          text="some text 1 "
-          title="Some title 1"
-          placeholder={placeholder}
-        />
-        <PostCard
-          text="some text 1 "
-          title="Some title 1"
-          placeholder={placeholder}
-        />
-        <PostCard
-          text="some text 1 "
-          title="Some title 1"
-          placeholder={placeholder}
-        />
+        {/* {console.log(this.props.postsReducer)} */}
+        {this.props.postsReducer.list.map(el => (
+          <PostCard key={el._id} image={el.media.path} title={el.title} />
+        ))}
       </div>
     );
   }
