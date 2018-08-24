@@ -9,6 +9,7 @@ import {
 } from "../constatnts";
 
 const loginSuccesss = () => {
+  //padod uz reducers
   return {
     type: LOGIN_SUCCES,
     payload: {

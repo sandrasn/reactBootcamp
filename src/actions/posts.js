@@ -44,7 +44,7 @@ export const submitPost = (data, caption) => {
           url: `${API.BASE}${API.POST_CAPTION}`
         })
           .then(() => dispatch(submitSuccess()))
-          .then(() => dispatch(submitError()));
+          .then(() => dispatch(submitError())); // dispatch nodod visu infomaciju reducers.
       })
       .catch(() => dispatch(submitError()));
   };

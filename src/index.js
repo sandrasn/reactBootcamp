@@ -12,7 +12,7 @@ import registerServiceWorker from "./registerServiceWorker";
 import Login from "./containers/Login";
 import Register from "./containers/Register";
 
-const store = createStore(rootReducer, {}, applyMiddleware(reduxThunk));
+const store = createStore(rootReducer, {}, applyMiddleware(reduxThunk)); // funkcija, kas izveido ivenu lielu funkciju, kurai var
 
 class App extends Component {
   render() {

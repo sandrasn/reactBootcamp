@@ -1,5 +1,6 @@
 import { SUBMIT_ERROR, SUBMIT_SUCCESS, LOAD_POSTS } from "../constatnts";
 
+//
 export const postsReducer = (state = {}, action) => {
   switch (action.type) {
     case SUBMIT_SUCCESS:

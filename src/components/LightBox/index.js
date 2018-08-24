@@ -15,3 +15,5 @@ class LightBox extends Component {
 }
 
 export default LightBox;
+
+//{this.props.children} nodro;sina iespeju paradit lightBox daudz elementus.
